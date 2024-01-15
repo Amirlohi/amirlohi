@@ -1,0 +1,136 @@
+body{
+    background-color: #c1c1c1;
+    font-family: system-ui;
+}
+.container{
+    width: 1000px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    transition: transform .5s;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+h1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.shop{
+    position: relative;
+    text-align: left;
+}
+.shop img{
+    width: 40px;
+}
+.shop span{
+    background-color: rgba(3, 147, 70, 0.802);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    padding: 3px 10px;
+}  
+.list .item img{
+    width: 250px;
+    height: 250px;  
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.list .item{
+    background-color: #eeeee1;
+    padding: 20px;
+    border-radius: 20px;
+}
+.list .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+.list .item .price{
+    letter-spacing: 5px;
+    font-size: small;
+}
+.list .item button{
+   background-color: rgba(3, 147, 70, 0.802);
+   color: #eeeee1;
+   border: none;
+   margin: 10px;
+   padding: 10px;
+   border-radius: 20px; 
+   cursor: pointer;
+}
+.cart{
+    font-family:monospace;
+    font-size: 25px;
+    width: 300px;
+    background-color: rgb(69, 68, 68);
+    color: #eeeee1;
+    position: fixed;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    inset: 0 -300px 0 auto;
+    transition: 0.5s;
+}
+
+body.showCart .cart{
+    inset: 0 0 0 auto;
+}
+
+body.showCart .cart{
+    visibility: hidden;
+}
+.cart .h1{
+    padding: 20px;
+    font-weight: 400;
+}
+.cart .btn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border: none;
+    cursor: pointer;
+}
+.cart .btn .close{
+    background-color: rgb(208, 52, 52);
+    color: #eeeee1;
+    padding: 0px;
+    font-size: 20px;
+}
+.cart .btn .check{
+    background-color: rgb(3, 147, 70, 0.802);
+    color: #eeeee1;
+    padding: 0px;
+    font-size: 20px;
+}
+.cart .listCart .item img{
+    width: 100%;
+    align-items: center;
+}
+.cart .number{
+    width: 250px;
+    color: #eeeee1;
+    display: inline-block;
+    cursor: pointer;
+    font-size:large
+}
+.cart .number .minus{
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.cart .number .plus{
+    border-radius: 50%;
+    font-size: 20px;
+}
+.listCart{
+    overflow: auto;
+}
